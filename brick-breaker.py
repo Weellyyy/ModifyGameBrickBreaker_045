@@ -18,7 +18,7 @@ class Ball(GameObject):
     def __init__(self, canvas, x, y):
         self.radius = 10
         self.direction = [1, -1]
-        self.speed = 6  # Kecepatan bola dibuat lebih rendah untuk kelancaran
+        self.speed = 6  
         item = canvas.create_oval(x - self.radius, y - self.radius,
                                   x + self.radius, y + self.radius,
                                   fill='black', outline='red', width=2)
@@ -214,7 +214,7 @@ class Game(tk.Frame):
         else:
             self.ball.update()
             self.paddle.update()
-            self.after(12, self.game_loop)  # 16 ms = ~60 FPS
+            self.after(12, self.game_loop)  
 
     def check_collisions(self):
         ball_coords = self.ball.get_position()
